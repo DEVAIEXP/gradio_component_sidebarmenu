@@ -27,7 +27,7 @@ pip install gradio-sidebar-menu
 ## Usage
 ```py
 import gradio as gr
-from gradio_sidebar_menu import DashboardMenu
+from gradio_sidebar_menu import SidebarMenu
 
 menu_data = [
     {"type": "item", "id": "dash", "label": "Dashboard", "icon": "layout-dashboard", "color": "#10b981"},
@@ -39,7 +39,7 @@ menu_data = [
 ]
 
 with gr.Blocks() as demo:
-    menu = DashboardMenu(
+    menu = SidebarMenu(
         menu_data=menu_data,
         value="dash",
         open=True,
@@ -67,7 +67,7 @@ Check out the full example in the [Hugging Face demo.](https://huggingface.co/sp
 ### Example with all properties
 
 ```py
-menu = DashboardMenu(
+menu = SidebarMenu(
     menu_data=menu_data,
     value="flux_train",                # start with FLUX Trainer selected
     open=False,                        # start closed
